@@ -1,0 +1,19 @@
+$(function(){
+	$('.nav-aside>li').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	$(window).scroll(function(){
+		var scrolltop=$(this).scrollTop();
+		if(scrolltop>300){
+			$('.bs-aside').css({
+				position:'fixed',
+				top:'300'
+			});
+		}else{
+			$('.bs-aside').css({
+				position:'relative',
+				top:'0'
+			});
+		}
+	});
+});
